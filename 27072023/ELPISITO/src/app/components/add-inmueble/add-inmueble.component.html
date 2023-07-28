@@ -1,0 +1,31 @@
+<div class="contenedor">
+
+    <h1>Añadir inmueble</h1>
+  
+    <form class="mx-auto" #form="ngForm" (ngSubmit)="add()">
+  
+      <div class="mb-3">
+        <label for="apertura">APERTURA*:</label>
+        <select class="form-select" required name="apertura" id="apertura" [(ngModel)]="inmueble.apertura">
+            <option value="INTERIOR" >INTERIOR</option>
+            <option value="EXTERIOR" >EXTERIOR</option>
+        </select>
+      </div>
+
+
+
+    <!--   <div class="mb-3">
+        <label for="inmueble">INMUEBLE*:</label>
+        <input id="poblacion" type="text" name="poblacion" required class="form-control" autocomplete="off" [(ngModel)]="poblacion.nombre" style="text-transform:uppercase">
+      </div> -->
+
+
+  
+      <div class="contenedor-boton">
+        <button type="submit" class="btn btn-md btn-primary" [disabled]="form.invalid">Añadir</button>
+      </div>
+  
+  
+    </form>
+  
+  </div>
